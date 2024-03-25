@@ -1,73 +1,41 @@
-/* heart css */
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  background: #333;
+  color: #fff;
+  text-align: center;
+  font-size: 1em;
+  margin-top: 1em;
 }
+ .messege{
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 4em;
+  margin-top: 1em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 .heart {
-  height: 100px;
-  width: 100px;
-  background-color: red;
-  transform: rotate(-45deg);
+  fill: red;
   position: relative;
-}
-.heart::before, 
-.heart::after {
-  content: "";
-  height: 100px;
-  width: 100px;
-  background-color: red;
-  border-radius: 50%;
-  position: absolute;
-}
-.heart::before {
-  top: -50px;
-  left: 0px;
+  top: 5px;
+  width: 50px;
+  animation: pulse 1s ease infinite, 
 }
 
-.heart::after {
-  left: 50px;
-  top: 0px;
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+  100% { transform: scale(1); }
 }
-@keyframes heartbeat {
-  0% {
-      transform: scale(1)
-          rotate(-45deg);
-  }
-
-  25% {
-      transform: scale(1.25)
-          rotate(-45deg);
-  }
-
-  45% {
-      transform: scale(1.5)
-          rotate(-45deg);
-  }
-} 
-.heart {
-  height: 100px;
-  width: 100px;
-  background-color: red;
-  transform: rotate(-45deg);
-  position: relative;
-  animation: heartbeat 1s infinite;
-}
-
-
-/* Navigation Bar */
-
 ul {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+  left: 0;
   list-style-type: none;
-  right: 0;
   margin: 0;
   padding: 0;
   overflow: hidden;
   background-color: #333;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 li {
@@ -82,8 +50,10 @@ li a {
   text-decoration: none;
 }
 
-
-/* Change the link color to #111 (black) on hover */
-li a:hover {
+li a:hover:not(.active) {
   background-color: #111;
+}
+
+.active {
+  background-color: #04AA6D;
 }

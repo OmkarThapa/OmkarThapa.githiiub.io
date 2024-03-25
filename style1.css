@@ -1,0 +1,62 @@
+body {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .container {
+    text-align: center;
+    font-size: 8rem;
+    margin-top: calc(50vh - 8rem/2);
+  }
+  
+  @keyframes poop-dance {
+    from, 49% { transform-origin: -50% 100%; }
+    50%, 75%, to { transform-origin: 150% 100%; }
+    25% { transform: rotate(-10deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(10deg); }
+  }
+  
+  .poop {
+      animation: poop-dance .8s infinite alternate ease-in-out;
+  }
+  
+  .poop {
+      display: inline-block;
+  }
+  
+  .poop:empty::before {
+    content: "💩";
+  }
+
+  ul {
+left: 0;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover:not(.active) {
+    background-color: #111;
+  }
+  
+  .active {
+    background-color: #04AA6D;
+  }
