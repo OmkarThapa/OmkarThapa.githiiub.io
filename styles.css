@@ -1,4 +1,11 @@
+body{
+
+  align-items: center;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  size: 20%;
+}
 /* Navigation Bar */
+
 ul {
   position: fixed;
   bottom: 0;
