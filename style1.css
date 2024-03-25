@@ -30,7 +30,7 @@ body {
   }
 
   ul {
-left: 0;
+    left: 45%;
     list-style-type: none;
     margin: 0;
     padding: 0;
